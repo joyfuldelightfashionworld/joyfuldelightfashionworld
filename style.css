@@ -1,154 +1,164 @@
-/* ================= RESET ================= */
+/* RESET */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
-/* ================= BODY ================= */
+/* BODY */
 body {
-    background-color: #f5f5f5;
-    color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f9f9f9;
+    color: #222;
 }
 
 /* ================= HEADER ================= */
 header {
     text-align: center;
-    padding: 20px;
+    padding: 20px 15px;
     background: #fff;
 }
 
 .logo {
-    width: 100px;
-    display: block;
+    max-width: 180px;
     margin: 0 auto 10px;
+    display: block;
 }
 
 header h1 {
-    font-size: 1.8rem;
-    margin-bottom: 5px;
+    font-size: 22px;
+    margin-bottom: 6px;
 }
 
 header p {
-    font-size: 0.95rem;
-    color: #555;
+    font-size: 14px;
+    margin-bottom: 12px;
 }
 
-/* ================= NAV ================= */
+/* NAV */
 nav {
-    margin-top: 15px;
     display: flex;
     justify-content: center;
-    gap: 10px;
     flex-wrap: wrap;
+    gap: 10px;
 }
 
 nav a {
     text-decoration: none;
-    background: #eee;
-    padding: 6px 12px;
-    border-radius: 20px;
-    font-size: 0.85rem;
+    font-size: 13px;
     color: #333;
+    background: #eee;
+    padding: 6px 10px;
+    border-radius: 5px;
 }
 
 /* ================= HERO ================= */
-.hero {
-    text-align: center;
-}
-
 .hero img {
     width: 100%;
-    max-width: 1200px;
-    height: auto;
-    margin: 0 auto;
+    max-height: 280px;
+    object-fit: cover;
     display: block;
 }
 
-/* ================= SECTION TITLE ================= */
+/* ================= SECTION TITLES ================= */
 .section-title {
     text-align: center;
-    margin: 35px 0 15px;
-    font-size: 1.6rem;
+    margin: 25px 0 10px;
+    font-size: 18px;
 }
 
-/* ================= PRODUCTS (TRUE CENTER FIX) ================= */
+/* ================= PRODUCTS ================= */
 .products {
+    max-width: 1100px;
+    margin: 0 auto 20px;
+    padding: 0 15px;
+
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 18px;
-    max-width: 1100px;      /* 🔑 THIS centers everything */
-    margin: 0 auto;         /* 🔑 /* ================= PRODUCT CARD (SHORTER) ================= */
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+}
+
+/* ================= PRODUCT CARD ================= */
 .product-card {
     background: #fff;
     border-radius: 10px;
-    padding: 8px;                 /* reduced */
+    padding: 10px;
     text-align: center;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
-/* ================= IMAGE (MUCH SHORTER) ================= */
+/* IMAGE FIX (THIS IS THE BIG ISSUE) */
 .product-card img {
     width: 100%;
-    height: 120px;                /* 🔑 much smaller */
-    object-fit: contain;
-    margin-bottom: 4px;
+    height: 140px;        /* FORCE SAME HEIGHT */
+    object-fit: contain; /* NO CROPPING */
+    margin-bottom: 8px;
 }
 
-/* ================= TEXT TIGHTEN ================= */
+/* TEXT */
 .product-card h3 {
-    font-size: 0.9rem;
-    margin-bottom: 2px;
+    font-size: 14px;
+    margin-bottom: 5px;
 }
 
 .product-card p {
-    font-size: 0.8rem;
-    margin-bottom: 4px;
+    font-size: 13px;
+    margin-bottom: 6px;
 }
 
-/* ================= BUTTON SMALLER ================= */
+/* BUTTONS */
 .btn {
-    padding: 6px 12px;
-    font-size: 0.75rem;
-}THIS centers everything */
-    padding: 15px;
+    display: inline-block;
+    margin: 4px 3px;
+    padding: 6px 10px;
+    font-size: 12px;
+    background: #25d366;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
 }
 
+.btn.outline {
+    background: #fff;
+    color: #25d366;
+    border: 1px solid #25d366;
 }
 
 /* ================= CONTACT ================= */
 .contact-payment {
-    text-align: center;
     background: #fff;
-    padding: 25px;
-    max-width: 700px;
-    margin: 40px auto;
-    border-radius: 12px;
+    text-align: center;
+    padding: 20px 15px;
 }
 
 .contact-payment p {
     margin: 6px 0;
+    font-size: 14px;
+}
+
+.contact-payment a {
+    color: #25d366;
+    text-decoration: none;
 }
 
 /* ================= FOOTER ================= */
 footer {
     text-align: center;
-    padding: 15px;
-    font-size: 0.8rem;
-    background: #fff;
+    padding: 12px;
+    font-size: 13px;
+    background: #eee;
 }
 
 /* ================= FLOATING WHATSAPP ================= */
 .float-wa {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    right: 15px;
+    bottom: 15px;
     background: #25d366;
     color: #fff;
-    padding: 10px 16px;
+    padding: 10px 14px;
     border-radius: 30px;
     text-decoration: none;
-    font-size: 0.85rem;
+    font-size: 13px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
 }
-
