@@ -1,223 +1,175 @@
-/* ================= GENERAL RESET ================= */
+/* ================= RESET ================= */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, Arial, sans-serif;
 }
 
+/* ================= BODY ================= */
 body {
-    background-color: #fff;
-    color: #333;
-    line-height: 1.5;
+    background-color: #f5f5f5; /* bookstore background */
+    color: #222;
 }
 
-/* ================= CONTAINER ================= */
+/* ================= PAGE WRAPPER ================= */
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
-    text-align: center;
+    max-width: 1100px;
+    margin: 0 auto;          /* HARD CENTER */
+    padding: 20px 15px;
+    background-color: #ffffff;
 }
 
 /* ================= HEADER ================= */
 header {
-    padding: 20px;
-    background-color: #f8f8f8;
+    text-align: center;
+    padding-bottom: 20px;
 }
 
 header .logo {
-    width: 120px;
-    height: auto;
+    width: 110px;
+    margin: 0 auto 10px;
     display: block;
-    margin: 0 auto 10px auto;
 }
 
 header h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     margin-bottom: 5px;
 }
 
 header p {
-    font-size: 1rem;
-    margin-bottom: 15px;
+    font-size: 0.95rem;
+    margin-bottom: 10px;
 }
 
 header nav a {
-    margin: 0 10px;
+    margin: 0 8px;
     text-decoration: none;
+    font-weight: 600;
     color: #333;
-    font-weight: bold;
-    transition: color 0.3s;
 }
 
 header nav a:hover {
     color: #e91e63;
 }
 
-/* ================= HERO BANNER ================= */
+/* ================= HERO ================= */
 .hero img {
     width: 100%;
-    max-width: 1000px;
-    height: 250px; /* smaller hero banner */
+    height: 200px;
     object-fit: cover;
-    display: block;
-    margin: 0 auto 30px auto;
-    border-radius: 10px;
+    border-radius: 8px;
+    margin: 20px 0 30px;
 }
 
-/* ================= SECTION TITLES ================= */
+/* ================= SECTION TITLE ================= */
 .section-title {
-    font-size: 1.8rem;
-    margin: 30px 0 20px 0;
+    font-size: 1.4rem;
+    margin-bottom: 20px;
     color: #e91e63;
+    text-align: left; /* bookstore style */
 }
 
-/* ================= PRODUCTS GRID ================= */
+/* ================= PRODUCT GRID (BOOKSTORE STYLE) ================= */
 .products {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-    padding: 0 10px 40px 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 20px;
 }
 
+/* ================= PRODUCT CARD ================= */
 .product-card {
-    background-color: #f9f9f9;
-    border-radius: 10px;
+    border: 1px solid #eee;
+    border-radius: 6px;
     padding: 10px;
-    width: 180px; /* smaller card width */
+    background-color: #fff;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: transform 0.2s ease;
 }
 
 .product-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+    transform: translateY(-3px);
 }
 
-/* ================= PRODUCT IMAGES ================= */
+/* ================= PRODUCT IMAGE ================= */
 .product-card img {
-    width: 100%;       /* fills card width */
-    height: 150px;     /* small, uniform height */
-    object-fit: cover; /* crops neatly */
-    border-radius: 8px;
-    display: block;
+    width: 100%;
+    height: 150px;
+    object-fit: cover;     /* CROPS LIKE BOOKSTORE */
+    border-radius: 4px;
     margin-bottom: 8px;
 }
 
 /* ================= PRODUCT TEXT ================= */
 .product-card h3 {
-    font-size: 1rem;
-    margin-bottom: 5px;
+    font-size: 0.9rem;
+    margin-bottom: 4px;
 }
 
 .product-card p {
-    font-size: 0.85rem;
-    margin-bottom: 8px;
+    font-size: 0.8rem;
     color: #555;
+    margin-bottom: 6px;
 }
 
-/* ================= BUTTONS ================= */
+/* ================= BUTTON ================= */
 .btn {
     display: inline-block;
+    padding: 6px 10px;
+    font-size: 0.8rem;
     background-color: #e91e63;
     color: #fff;
-    padding: 6px 12px;
-    margin: 4px 2px;
-    border-radius: 5px;
+    border-radius: 4px;
     text-decoration: none;
-    font-weight: bold;
-    font-size: 0.85rem;
-    transition: background-color 0.3s;
 }
 
 .btn:hover {
     background-color: #d81b60;
 }
 
-.btn.outline {
-    background-color: #fff;
-    color: #e91e63;
-    border: 2px solid #e91e63;
-}
-
-.btn.outline:hover {
-    background-color: #e91e63;
-    color: #fff;
-}
-
-/* ================= CONTACT & PAYMENT ================= */
+/* ================= CONTACT ================= */
 .contact-payment {
-    padding: 20px 10px;
-    background-color: #f8f8f8;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    font-size: 0.9rem;
+    text-align: center;
 }
 
 .contact-payment p {
-    margin: 8px 0;
-    font-size: 0.9rem;
-}
-
-.contact-payment a {
-    color: #e91e63;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.contact-payment a:hover {
-    text-decoration: underline;
+    margin: 6px 0;
 }
 
 /* ================= FOOTER ================= */
 footer {
+    text-align: center;
+    padding: 15px;
+    font-size: 0.85rem;
     background-color: #333;
     color: #fff;
-    padding: 15px;
+    margin-top: 30px;
 }
 
-/* ================= FLOATING WHATSAPP BUTTON ================= */
+/* ================= FLOATING WHATSAPP ================= */
 .float-wa {
     position: fixed;
-    bottom: 20px;
     right: 20px;
-    background-color: #25d366;
+    bottom: 20px;
+    background: #25d366;
     color: #fff;
     padding: 10px 14px;
-    border-radius: 50px;
+    border-radius: 30px;
     text-decoration: none;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    z-index: 1000;
+    font-size: 0.85rem;
 }
 
-.float-wa:hover {
-    background-color: #1ebe57;
-}
-
-/* ================= RESPONSIVE ================= */
-@media screen and (max-width: 768px) {
-    .products {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .product-card {
-        width: 90%;
-    }
-
-    header h1 {
-        font-size: 1.5rem;
+/* ================= MOBILE ================= */
+@media (max-width: 600px) {
+    .hero img {
+        height: 160px;
     }
 
     .section-title {
-        font-size: 1.4rem;
+        text-align: center;
     }
-
-    .hero img {
-        height: 180px; /* smaller hero on mobile */
-    }
-    }
+}
